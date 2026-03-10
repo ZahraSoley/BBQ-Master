@@ -9,7 +9,9 @@ body{
     text-align: center;
 }
 
-/* typography */
+/*=========== 
+typography 
+===========*/
 
 h1{
     font-size: 2.25rem;
@@ -17,21 +19,25 @@ h1{
     color: #ffff;
 }
 
-h1 + p {
+h1 + p{
     color: #F18119;
     font-weight: 900;
-    font-size: 1.3125rem
+    font-size: 1.3125rem;
+    margin:2em 0;
+    text-transform: uppercase;
 }
 
 h2{
     font-size: 1.3125rem;
+    margin: 0;
 }
 
-h2 + p {
+h2 + p{
     color: #F18119;
     font-weight: 900;
     font-size: 1rem;
     text-transform: uppercase;
+    margin: 0;
 }
 
 .fine-print {
@@ -39,31 +45,68 @@ h2 + p {
     letter-spacing: 1px;
 }
 
-.top-text {
+.top-text{
     font-size: 0.625rem;
     font-weight: 900;
     color:#F18119;
     text-transform: uppercase;
+    order: -1;
+    margin: 0;
 }
 
 span{
     font-weight: 900;
 }
 
-/* main content */
-
-/* .container{
-    display: flex;
-} */
+/*=============
+intro content 
+=============*/
 
 .intro{
-    /* flex:2; */
     background-color: #404040;
     background-image: url(../images/ribs.jpg);
-    padding: 0 .25 1em;
+    background-size: cover;
+    background-position: center;
+    padding: 0 .5 2em; 
+    display: flex;
+    flex-direction: column;
 }
 
-/* .main-content{
-    flex: 3;
-} */
+/*=============
+main content 
+=============*/
+
+.main-content{
+    padding: 2em 1em;
+}
+
+/*=============
+media queries 
+=============*/
+
+@media screen and (min-width: 500px) {
+    body{
+        font-size: 1.25rem;
+    }
+
+    h1{
+        font-size: 3.5rem;
+    }
+
+    h2, h1 + p{
+        font-size: 1.75rem;
+    }
+
+    .container{
+        display: flex;
+    }
+
+    .intro{
+        flex:1
+    }
+
+    .main-content{
+        flex:1
+    }
+}
 
