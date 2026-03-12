@@ -70,9 +70,11 @@ intro content
     background-image: url(../images/ribs.jpg);
     background-size: cover;
     background-position: center;
-    padding: 0 .5 2em; 
+    padding: 0 .5em 2em; 
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    min-height: 50vh;
 }
 
 /*=============
@@ -87,7 +89,7 @@ main content
 media queries 
 =============*/
 
-@media screen and (min-width: 500px) {
+@media (min-width: 500px) {
     body{
         font-size: 1.25rem;
     }
@@ -107,6 +109,18 @@ media queries
     .intro, .main-content{
         flex:1;
         min-height: 100vh;
+    }
+
+    .main-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .intro{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
 }
