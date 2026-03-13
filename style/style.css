@@ -71,9 +71,6 @@ intro content
     background-size: cover;
     background-position: center;
     padding: 0 .5em 2em; 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     min-height: 50vh;
 }
 
@@ -85,6 +82,22 @@ main content
     padding: 2em 1em;
 }
 
+/* ============
+container
+============= */
+
+.container{
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.container-intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
 /*=============
 media queries 
 =============*/
@@ -92,6 +105,7 @@ media queries
 @media (min-width: 500px) {
     body{
         font-size: 1.25rem;
+        display: flex;
     }
 
     h1{
@@ -100,10 +114,6 @@ media queries
 
     h2, h1 + p{
         font-size: 1.75rem;
-    }
-
-    .container{
-        display: flex;
     }
 
     .intro, .main-content{
