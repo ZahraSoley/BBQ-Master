@@ -119,11 +119,30 @@ input{
     text-align: inherit;
     margin-bottom: .75em;
     border: 1px solid #404040;
+    padding: .25em;
 }
 
 button {
     background-color: #F18119;
-    border:none
+    border:none;
+    padding:0.5em 1.5em ;
+    font-size: 0.625em;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.btn-primary{
+    background: linear-gradient(270deg, #ff713b, #ffa51d);
+    color: white;
+    /* we put the transition in here because if we put it on hover it only has transition when we hove when we are out of hovering zone it immediatly change color to white */
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover{
+    color: black;
+    transform: scale(1.1);
 }
 
 /*=============
