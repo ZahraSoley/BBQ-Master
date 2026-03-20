@@ -55,6 +55,9 @@ h2 + p{
     text-transform: uppercase;
     order: -1;
     margin: 0;
+    padding-top: 2px;
+    border-top: 5px solid #F18119;
+    border-image: linear-gradient(90deg, #F18119, #ff713b) 1;
 }
 
 span{
@@ -66,8 +69,9 @@ intro content
 =============*/
 
 .intro{
-    background-color: #404040;
+    background-color: #cfcfcf;
     background-image: url(../images/ribs.jpg);
+    background-blend-mode: multiply;
     background-size: cover;
     background-position: center;
     padding: 0 .5em 2em; 
@@ -98,6 +102,11 @@ container
     height: 100%;
 }
 
+.container-intro > * {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* =================
    form
    ================= */
@@ -120,6 +129,11 @@ input{
     margin-bottom: .75em;
     border: 1px solid #404040;
     padding: .25em;
+    transition: transform 0.3s ease;
+}
+
+input:focus{
+    transform: scale(1.1);
 }
 
 button {
@@ -136,11 +150,13 @@ button {
 .btn-primary{
     background: linear-gradient(270deg, #ff713b, #ffa51d);
     color: white;
-    /* we put the transition in here because if we put it on hover it only has transition when we hove when we are out of hovering zone it immediatly change color to white */
-    transition: all 0.3s ease;
+    /* we put the transition in here because if we put it on hover it only has 
+    transition when we hove when we are out of hovering zone it immediatly change color to white */
+    transition: transform 0.3s ease;
 }
 
-.btn-primary:hover{
+.btn-primary:hover,
+.btn-primary:focus{
     color: black;
     transform: scale(1.1);
 }
